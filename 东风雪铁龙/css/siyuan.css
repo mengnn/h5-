@@ -1,0 +1,13 @@
+ @font-face {
+    font-family: 'SiYuanRegular11ee5a9d511cc1a';  /*自定义字体名称*/
+    src: url('//cdn.webfont.youziku.com/webfonts/nomal/117786/46827/5af4046ff629dd11a4d2bb8d.gif?r=74334960047');
+    src: url('//cdn.webfont.youziku.com/webfonts/nomal/117786/46827/5af4046ff629dd11a4d2bb8d.gif?r=74334960047?#iefix') format('embedded-opentype'),/*IE6-IE8*/
+    url('//cdn.webfont.youziku.com/webfonts/nomal/117786/46827/5af4046ff629dd11a4d2bb8d.png?r=74334960047') format('woff2'),
+    url('//cdn.webfont.youziku.com/webfonts/nomal/117786/46827/5af4046ff629dd11a4d2bb8d.bmp?r=74334960047') format('woff'),/*现代所有浏览器*/
+    url('//cdn.webfont.youziku.com/webfonts/nomal/117786/46827/5af4046ff629dd11a4d2bb8d.jpg?r=74334960047') format('truetype');/*Safari、Android、iOS*/
+    font-weight: normal;
+    font-style: normal;
+}
+body{
+    font-family: 'SiYuanRegular11ee5a9d511cc1a';
+}

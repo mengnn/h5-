@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <title>东风雪铁龙</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=0,minimum-scale=1.0,maximum-scale=1.0" />
+
+  <meta name="screen-orientation" content="portrait">
+  <meta name="x5-orientation" content="portrait">
+
+  <!-- 兼容国产浏览器的高速模式 -->
+  <meta name="renderer" content="webkit"/>
+  <meta name="Author" content="fans_m@163.com" />
+  <meta name="Keywords" content="会腾软件" />
+  <meta name="Description" content="会腾定制" />
+
+  <!-- Link Swiper's CSS -->
+  <!-- <link rel="stylesheet" type="text/css" href="css/swiper.css"/> -->
+  <link rel="stylesheet" type="text/css" href="css/index.css?=1"/>
+ <style type="text/css">
+   body,html{
+    width:100%;
+    height: 100%;
+   }
+ </style>
+</head>
+<body>
+  <!-- Swiper -->
+  <div class="swiper-container" style="position: relative;top:0;left: 0;width:100%;height:100%;">
+    <div class="swiper-wrapper" style="position: relative;top:0;left: 0;width:100%;height:100%;">
+          <!-- 页面1 -->
+      <div class="swiper-slide swiperOne" style="display: block;width: 100%;height: 100%;position: absolute;top:0;left: 0;z-index: 1">
+        <img src="images/pic1/pic1-red.png" class="pic1Red"/>
+        <img src="images/pic1/pic1-logo.png" class="pic1Logo"/>
+        <div class="pic1Loading">
+          <div class="pic1Loadingone">
+            <div class="pic1Loadingonediv">
+              <img src="images/pic1/pic1-circle.gif" class="pic1-circle"/>
+              <p>
+                <span class="circleTime">0</span>
+                <b>%</b>
+              </p>
+            </div>
+          </div>
+          <div class="pic1Loadingtwo">
+            <p class="pic1arrowP">
+            </p>
+          </div>
+        </div>
+        <img src="images/pic1/pic1-car.png" class="pic1car"/>
+      </div>
+      <!-- 页面2 -->
+      <div class="swiper-slide swiperTwo" style="display: none;width: 100%;height: 100%;z-index: 2;position: absolute;top:0;left: 0;">
+        <div class="pic2Box" style="left:0;position: absolute;">
+          <img src="images/pic2/pic2-words.png" class="pic2Words"/>
+          <img src="images/pic2/pic2-word2.png" class="pic2Words2"/>
+          <div class="startBox">
+            <img src="images/pic2/pic2-lighteffect.gif" class="lightEffect"/>
+            <img src="images/pic2/pic2-satart.png" class="startBtn"/>
+          </div>
+          <img src="images/pic2/pic2-car.png" class="pic2Car"/>
+        </div>
+      </div>
+      <div class="swiper-slide swiperThree" style="display: none;width: 100%;height: 100%;position: absolute;top:0;left: 0;z-index: 4">
+        <!-- <img src="images/runcar.png" class="runcar"/> -->
+        <img src="images/1.gif" style="width:100%;height:100%;position: absolute;left: 0;top:0%;z-index: 3"class="abc" />
+      </div>
+       <div class="swiper-slide swiperFour" style="display: none;width: 100%;height: 100%;position: absolute;top:0;left: 0;z-index: 3">
+         <img src="images/cabox.png" style="width:90%;position: absolute;right: 0;top:20%;z-index: 2" class="abd">
+      </div>
+
+    </div>
+
+  </div>
+  <audio src="images/reminder.mp3" id="reminder"></audio>
+  <audio src="images/start.mp3" id="startCar"></audio>
+
+  <!-- Swiper JS -->
+  <script src="js/jquery.js"></script>
+  <script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+  <script src ="js/swiper.min.js"></script>
+
+  <script>
+
+    var num=parseInt($(".circleTime").text());
+    var wid=parseInt(0);
+    var timeInterval=setInterval(function(){
+      num+=2;
+      $(".circleTime").text(num)
+      if(num == 100){
+        clearInterval(timeInterval);
+        page2()
+      }
+    },50);
+    function page2(){
+      $(".swiperTwo").fadeIn(500);
+      $(".pic2Words").fadeIn(700,function(){
+
+         autoPlayAudio();
+      });
+      $(".pic2Words2").fadeIn(4000);
+      $(".startBox").fadeIn(6500);
+      $(".pic2Car").fadeIn(7500);
+    }
+    // 启动小车
+    $(".startBtn").click(function(){
+      $("#startCar").get(0).play();
+     setTimeout(function(){
+         $(".swiperThree").fadeIn(800,function(){
+          $(".swiperFour").show();
+          // $(".runcar").animate({bottom:"15%"},1600,function(){
+          // });
+          //
+           setTimeout(function(){
+            $(".swiperThree").animate({
+              opacity:"1"
+              // top:"-100%"
+            },1000,function(){
+             setTimeout(function(){
+                  // window.location.href="menu.html";
+             }, 1500);
+          })
+          },500);
+        })
+     },3000);
+
+    });
+
+    function autoPlayAudio() {
+        wx.config({
+            // 配置信息, 即使不正确也能使用 wx.ready
+            debug: false,
+            appId: '',
+            timestamp: 1,
+            nonceStr: '',
+            signature: '',
+            jsApiList: []
+        });
+        wx.ready(function() {
+            // var globalAudio=document.getElementById("bgMusic");
+            // globalAudio.play();
+            $("#reminder").get(0).play();
+        });
+    };
+    $("body").on("touchmove", function (event) {event.preventDefault();});
+    document.addEventListener('touchmove', function(e){e.preventDefault()}, false);
+
+
+//     window.addEventListener("onorientationchange" in window ? "orientationchange" : "resize", function() {
+//     if (window.orientation === 180 || window.orientation === 0) {
+//         alert('竖屏状态！');
+//     }
+//     if (window.orientation === 90 || window.orientation === -90 ){
+//         alert('横屏状态！');
+//     }
+// }, false);
+
+
+      (function(){
+    var supportsOrientation = (typeof window.orientation == 'number' && typeof window.onorientationchange == 'object');
+    var HTMLNode = document.body.parentNode;
+    var updateOrientation = function() {
+      // rewrite the function depending on what's supported
+      if(supportsOrientation) {
+        updateOrientation = function() {
+          var orientation = window.orientation;
+
+          switch(orientation) {
+            case 90: case -90:
+              orientation = 'landscape';
+            break;
+            default:
+              orientation = 'portrait';
+          }
+
+          // set the class on the HTML element (i.e. )
+          HTMLNode.setAttribute('class', orientation);
+        }
+      } else {
+        updateOrientation = function() {
+          // landscape when width is biggest, otherwise portrait
+          var orientation = (window.innerWidth > window.innerHeight) ? 'landscape': 'portrait';
+
+          // set the class on the HTML element (i.e. )
+          HTMLNode.setAttribute('class', orientation);
+        }
+      }
+
+      updateOrientation();
+    }
+    var init = function() {
+      // initialize the orientation
+      updateOrientation();
+
+      if(supportsOrientation) {
+        window.addEventListener('orientationchange', updateOrientation, false);
+      } else {
+        // fallback: update every 5 seconds
+        setInterval(updateOrientation, 5000);
+      }
+
+    }
+    window.addEventListener('DOMContentLoaded', init, false);
+  })();
+
+
+  </script>
+</body>
+</html>

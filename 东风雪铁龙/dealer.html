@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8"/>
+    <title>东风雪铁龙-经销商</title>
+    <!-- 设置 viewport -->
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" />
+
+    <!-- IE -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <!-- 兼容国产浏览器的高速模式 -->
+    <meta name="renderer" content="webkit"/>
+    <meta name="Author" content="fans_m@163.com" />
+    <meta name="Keywords" content="会腾软件" />
+    <meta name="Description" content="会腾定制" />
+
+
+  <style type="text/css">
+    html,body{
+      width:100%;
+      height: 100%;
+      margin:0;
+      padding:0;
+    }
+    .customBox{
+      width:100%;
+      height: 100%;
+      position:relative;
+      background: url('images/daad/bg.jpg') 0 0 no-repeat;
+      background-size: 100% 100%;
+    }
+    .logoLeft{
+      width: 25.3%;
+      position: absolute;
+      top: 6.7%;
+      left: 7%;
+    }
+    .logoRight{
+      width: 21%;
+      position: absolute;
+      top: 3.7%;
+      right: 7%;
+    }
+    .mainText{
+      width:86.5%;
+      /*height: */
+      position: absolute;
+      left: 6.75%;
+      top:28.5%;
+      background: #fff;
+      border-radius: 5px;
+      border: 1px solid #b9b9cd;
+    }
+    .title{
+      width:100%;
+      height: 35px;
+      background:#148CB4;
+      border-radius: 5px 5px 0 0;
+      color: #fff;
+      line-height: 35px;
+    }
+    .title img{
+      height:18px;
+      margin-left: 15px;
+      vertical-align: top;
+      margin-top: 8px;
+    }
+    .title span{
+      font-size: 18px;
+      margin-left: 10px;
+    }
+    .editRegion,.editCity,.editCode{
+      text-align: center;
+    }
+    .editRegion{
+      margin-top: 40px;
+      margin-bottom: 20px;
+    }
+    .editCity{
+      margin-bottom: 20px;
+    }
+    .editCode{
+      margin-bottom: 40px;
+    }
+    .editRegion select,.editCity select{
+      width:190px;
+      height: 25px;
+      border:1px solid #ccc;
+      text-align:center;
+      outline-style: none;
+      margin-left:5px;
+      font-size: 16px;
+      text-align: center;
+      text-align-last: center;
+    }
+    .editCode input{
+      width:190px;
+      height: 25px;
+      border-radius: 10px;
+      border:1px solid #ccc;
+      text-align:center;
+      outline-style: none;
+      margin-left:5px;
+      font-size: 16px;
+    }
+    .subBtn{
+      width:100px;
+      height: 35px;
+      background:#148CB4;
+      text-align:center;
+      line-height: 35px;
+      position: absolute;
+      color: #fff;
+      border-radius: 5px;
+      position: absolute;
+      top:72%;
+      left: 50%;
+      transform: translate(-50%,0%);
+    }
+    .return{
+      width:19.5%;
+      position: absolute;
+      bottom:60px;
+      right:7.5%;
+    }
+    .phoneBox{
+      width:85%;
+      height:45px;
+      background: #148CB4;
+      border-radius: 5px;
+      position: absolute;
+      bottom: 5px;
+      left: 7.5%;
+    }
+    .phoneBox p{
+      padding:0;
+      margin: 3px;
+      font-size:14px;
+      color: #fff;
+    }
+    .phoneBox p a{
+      color: #fff;
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+  <div class="customBox">
+     <img src="images/logoLeft.png" class="logoLeft">
+     <img src="images/logoRight.png" class="logoRight">
+     <img src="images/actinf/slog.png" style="width: 60%;position: absolute;left: 6.75%;top: 25.5%;"/>
+     <div class="mainText">
+       <div class="title">
+         <img src="images/daad/title.png">
+         <span>经销商</span>
+       </div>
+       <div class="editRegion">
+          <span>网点区域</span>
+          <select>
+            <option>点击选择</option>
+            <option>网点一</option>
+            <option>网点二</option>
+          </select>
+       </div>
+       <div class="editCity">
+          <span>网点城市</span>
+          <select>
+            <option>点击选择</option>
+            <option>网点一</option>
+            <option>网点二</option>
+          </select>
+       </div>
+       <div class="editCode">
+          <span>网点编码</span>
+          <input type="text" placeholder="点击填写" style="-webkit-user-modify: read-write-plaintext-only;" />
+       </div>
+     </div>
+     <div class="subBtn">确认提交</div>
+     <img src="images/daad/return.png" class="return"/>
+     <div class="phoneBox">
+       <p style="margin-left: 20px;">会务组联系方式：<a href="tel:15821133060">158-2113-3060</a></p>
+       <p style="margin-left: 132px;"><a href="tel:15921658801">159-2165-8801</a></p>
+     </div>
+  </div>
+
+
+<script src="js/jquery.js"></script>
+<script>
+ //返回首页
+$(".return").click(function(){
+    window.location.href="menu.html";
+})
+
+
+
+
+
+$(function () {
+    var u = navigator.userAgent, app = navigator.appVersion;
+    var isAndroid = u.indexOf('Android') > -1 || u.indexOf('Linux') > -1; //g
+    var isIOS = !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/); //ios终端
+    if (isAndroid) {
+       //这个是安卓操作系统
+        var wHeight1 = window.innerHeight;   //获取初始可视窗口高度
+        $(window).resize(function(){
+          var wHeight3 = window.innerHeight;
+          if(wHeight3 < wHeight1){
+            $(".phoneBox,.subBtn,.return").hide();
+          }else if(wHeight3 == wHeight1){
+            $(".phoneBox,.subBtn,.return").show();
+          }
+        })
+    }
+    if (isIOS) {
+　　　　//这个是ios操作系统
+    }
+});
+
+</script>
+</body>
+</html>

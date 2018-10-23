@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8"/>
+    <title>东风雪铁龙-场地信息</title>
+    <!-- 设置 viewport -->
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" />
+    <!-- IE -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <!-- 兼容国产浏览器的高速模式 -->
+    <meta name="renderer" content="webkit"/>
+    <meta name="Author" content="fans_m@163.com" />
+    <meta name="Keywords" content="会腾软件" />
+    <meta name="Description" content="会腾定制" />
+
+
+  <style type="text/css">
+    html,body{
+      width:100%;
+      height: 100%;
+      margin:0;
+      padding:0;
+    }
+    .customBox{
+      width:100%;
+      height: 100%;
+      position:relative;
+      background: url('images/siteinfo/bg.png') 0 0 no-repeat;
+      background-size: 100% 100%;
+    }
+    .logoLeft{
+      width: 25.3%;
+      position: absolute;
+      top: 6.7%;
+      left: 7%;
+    }
+    .logoRight{
+      width: 21%;
+      position: absolute;
+      top: 3.7%;
+      right: 7%;
+    }
+    .mainText{
+      width:82%;
+      /*height: */
+      position: absolute;
+      left: 9%;
+      top:16%;
+      border-radius: 5px;
+    }
+    .hotelBox{
+      width:100%;
+      overflow: hidden;
+    }
+    .mainText .expo{
+      width:100%;
+    }
+    .marriott{
+      width:47%;
+      float: left;
+    }
+    .healton{
+      width:47%;
+      float: right;
+    }
+    .returnBox{
+      width:19.5%;
+      position: absolute;
+      bottom:60px;
+      right:7.5%;
+    }
+    .return,.mettingP{
+      width:100%;
+      display: block;
+    }
+    .mettingP{
+      margin-bottom: 5px;
+    }
+    .phoneBox{
+      width:85%;
+      height:45px;
+      background: #E2412D;
+      border-radius: 5px;
+      position: absolute;
+      bottom: 5px;
+      left: 7.5%;
+    }
+    .phoneBox p{
+      padding:0;
+      margin: 3px;
+      font-size:14px;
+      color: #fff;
+    }
+    .phoneBox p a{
+      color: #fff;
+      text-decoration: none;
+    }
+    .moduleBox{
+      width:100%;
+      height: 100%;
+      position: fixed;
+      top:0;
+      left: 0;
+      background: rgba(0,0,0,0.7);
+      display: none;
+    }
+    .imgBox{
+      width:86%;
+      overflow: hidden;
+      position: absolute;
+      top:50%;
+      left: 50%;
+      transform: translate(-50%,-50%);
+    }
+    .imgBox .moduImg{
+      width:100%;
+    }
+    .delete{
+      width:25px;
+      position: absolute;
+      top:10px;
+      right: 20px;
+    }
+
+  </style>
+</head>
+<body>
+  <div class="customBox">
+     <img src="images/logoLeft.png" class="logoLeft"/>
+     <img src="images/logoRight.png" class="logoRight"/>
+     <div class="mainText">
+       <img src="images/actinf/slog.png" style="width:72%;">
+       <img src="images/siteinfo/1.png" class="expo" dir="1">
+       <div class="hotelBox">
+          <img src="images/siteinfo/2.png" class="marriott" dir="2"/>
+          <img src="images/siteinfo/3.png" class="healton" dir="3"/>
+       </div>
+     </div>
+     <div class="returnBox">
+       <img src="images/siteinfo/4.png" class="mettingP"/>
+       <img src="images/siteinfo/5.png" class="return"/>
+     </div>
+     <div class="phoneBox">
+       <p style="margin-left: 20px;">会务组联系方式：<a href="tel:15821133060">158-2113-3060</a></p>
+       <p style="margin-left: 132px;"><a href="tel:15921658801">159-2165-8801</a></p>
+     </div>
+  </div>
+  <!-- 弹窗 -->
+  <div class="moduleBox">
+     <div class="imgBox">
+       <img src="images/siteinfo/22.png" class="moduImg"/>
+       <img src="images/siteinfo/delete.png" class="delete"/>
+     </div>
+  </div>
+
+
+<script src="js/jquery.js"></script>
+<script>
+  var height=window.screen.height ;
+  if(height <= 640){
+    $(".mainText").css({
+      width:"74%",
+      left:"13%"
+    })
+  }else{
+    $(".mainText").css({
+      width:"76%",
+      left:"12%"
+    })
+  }
+// if (/(iPhone|iPad|iPod|iOS)/i.test(navigator.userAgent)) {
+//     //alert(navigator.userAgent);
+//    alert("苹果端")
+// } else if (/(Android)/i.test(navigator.userAgent)) {
+//     //alert(navigator.userAgent);
+//     alert("安卓端")
+// } else {
+//    //pc端
+// };
+// 酒店信息详情
+$(".mainText").find("img").click(function(){
+  var dir=$(this).attr("dir");
+  $(".moduleBox").show();
+  if(dir == 1){
+    $(".moduImg").attr("src","images/siteinfo/22.png")
+  }else if(dir == 2){
+    $(".moduImg").attr("src","images/siteinfo/33.png")
+  }else if(dir == 3){
+    $(".moduImg").attr("src","images/siteinfo/44.png")
+  }
+})
+// 隐藏弹窗
+$(".delete").click(function(){
+  $(".moduleBox").hide();
+})
+
+//返回首页
+$(".return").click(function(){
+    window.location.href="menu.html";
+})
+//参会报名
+$(".mettingP").click(function(){
+    window.location.href="mettingenlist.html"
+})
+
+</script>
+</body>
+</html>

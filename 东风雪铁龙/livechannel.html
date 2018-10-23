@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8"/>
+    <title>东风雪铁龙-直播通道</title>
+    <!-- 设置 viewport -->
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" />
+    <!-- IE -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <!-- 兼容国产浏览器的高速模式 -->
+    <meta name="renderer" content="webkit"/>
+    <meta name="Author" content="fans_m@163.com" />
+    <meta name="Keywords" content="会腾软件" />
+    <meta name="Description" content="会腾定制" />
+
+
+  <style type="text/css">
+    html,body{
+      width:100%;
+      height: 100%;
+      margin:0;
+      padding:0;
+    }
+    .customBox{
+      width:100%;
+      height: 100%;
+      position:relative;
+      background: url('images/H5(3)/live.jpg') 0 0 no-repeat;
+      background-size: 100% 100%;
+    }
+    .logoLeft{
+      width: 25.3%;
+      position: absolute;
+      top: 6.7%;
+      left: 7%;
+    }
+    .logoRight{
+      width: 21%;
+      position: absolute;
+      top: 3.7%;
+      right: 7%;
+    }
+    .mainText{
+      width:86.5%;
+      /*height: */
+      position: absolute;
+      left: 6.75%;
+      top:28.5%;
+      background: #fff;
+      border-radius: 5px;
+      border: 1px solid #b9b9cd;
+    }
+    .title{
+      width:100%;
+      height: 35px;
+     /* background:#DC5F73;*/
+      background:#B9B7CF;
+      border-radius: 5px 5px 0 0;
+      color: #fff;
+      line-height: 35px;
+    }
+    .title img{
+      height:18px;
+      margin-left: 15px;
+      vertical-align: top;
+      margin-top: 8px;
+    }
+    .title span{
+      font-size: 18px;
+      margin-left: 10px;
+    }
+    .editName{
+      text-align: center;
+      width:100%;
+      height:130px;
+      background: #fff;
+    }
+    .returnBox {
+      width: 19.5%;
+      position: absolute;
+      bottom: 60px;
+      right: 7.5%;
+    }
+    .return, .mettingP {
+      width: 100%;
+      display: block;
+    }
+    .mettingP {
+      margin-bottom: 5px;
+    }
+    .phoneBox{
+      width:85%;
+      height:45px;
+      /*background: #DC5F73;*/
+      background: #B9B7CF;
+      border-radius: 5px;
+      position: absolute;
+      bottom: 5px;
+      left: 7.5%;
+    }
+    .phoneBox p{
+      padding:0;
+      margin: 3px;
+      font-size:14px;
+      color: #fff;
+    }
+    .phoneBox p a{
+      color: #fff;
+      text-decoration: none;
+    }
+    .editName img{
+      width:40px;
+      margin-top: 40px;
+    }
+    .editNumber{
+      background: #F1F1F1;
+      overflow: hidden;
+      padding: 15px 10px;
+      border-radius:0 0 5px 5px;
+    }
+    .editNumber p{
+      padding:0;
+      margin:3px 0;
+      color: #616161;
+    }
+  </style>
+</head>
+<body>
+  <div class="customBox">
+     <img src="images/logoLeft.png" class="logoLeft"/>
+     <img src="images/logoRight.png" class="logoRight"/>
+     <img src="images/actinf/slog.png" style="width: 60%;position: absolute;left: 6.75%;top: 25.5%;"/>
+     <div class="mainText">
+       <div class="title">
+         <img src="images/H5(3)/2.png"  />
+         <span>直播通道</span>
+       </div>
+       <div class="editName">
+          <img src="images/H5(3)/4.png"/>
+       </div>
+       <div class="editNumber">
+            <p style="font-size:12px;">2018年东风雪铁龙SUV云逸上市发布会直播将于</p>
+            <p style="font-size:18px;">9月20日19:00</p>
+            <p style="font-size:12px;"> 正式开启，敬请期待！</p>
+       </div>
+     </div>
+     <div class="returnBox">
+       <img src="images/siteinfo/4.png" class="mettingP"/>
+       <img src="images/siteinfo/5.png" class="return"/>
+     </div>
+     <div class="phoneBox">
+       <p style="margin-left: 20px;">会务组联系方式：<a href="tel:15821133060">158-2113-3060</a></p>
+       <p style="margin-left: 132px;"><a href="tel:15921658801">159-2165-8801</a></p>
+     </div>
+  </div>
+
+
+<script src="js/jquery.js"></script>
+<script>
+//返回首页
+$(".return").click(function(){
+    window.location.href="menu.html";
+})
+//参会报名
+$(".mettingP").click(function(){
+    window.location.href="mettingenlist.html"
+})
+
+
+</script>
+</body>
+</html>

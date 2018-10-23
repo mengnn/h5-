@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8"/>
+    <title>东风雪铁龙-个人中心</title>
+    <!-- 设置 viewport -->
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" />
+    <!-- IE -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <!-- 兼容国产浏览器的高速模式 -->
+    <meta name="renderer" content="webkit"/>
+    <meta name="Author" content="fans_m@163.com" />
+    <meta name="Keywords" content="会腾软件" />
+    <meta name="Description" content="会腾定制" />
+
+
+  <style type="text/css">
+    html,body{
+      width:100%;
+      height: 100%;
+      margin:0;
+      padding:0;
+    }
+    .customBox{
+      width:100%;
+      height: 100%;
+      position:relative;
+      background: url('images/H5(5)/11.png') 0 0 no-repeat;
+      background-size: 100% 100%;
+    }
+    .logoLeft{
+      width: 25.3%;
+      position: absolute;
+      top: 6.7%;
+      left: 7%;
+    }
+    .logoRight{
+      width: 21%;
+      position: absolute;
+      top: 3.7%;
+      right: 7%;
+    }
+    .mainText{
+      width:86.5%;
+      /*height: */
+      position: absolute;
+      left: 6.75%;
+      top:28.5%;
+      background: #fff;
+      border-radius: 5px;
+      border: 1px solid #b9b9cd;
+    }
+    .title{
+      width:100%;
+      height: 35px;
+      background:#DC002E;
+      border-radius: 5px 5px 0 0;
+      color: #fff;
+      line-height: 35px;
+    }
+    .title img{
+      height:18px;
+      margin-left: 15px;
+      vertical-align: top;
+      margin-top: 8px;
+    }
+    .title span{
+      font-size: 18px;
+      margin-left: 10px;
+    }
+    .editName{
+      text-align: center;
+      width:100%;
+      background: #fff;
+      color: #616161;
+      border-radius: 0 0 5px 5px;
+    }
+    .returnBox {
+      width: 19.5%;
+      position: absolute;
+      bottom: 60px;
+      right: 7.5%;
+    }
+    .return, .mettingP {
+      width: 100%;
+      display: block;
+    }
+    .mettingP {
+      margin-bottom: 5px;
+    }
+    .phoneBox{
+      width:85%;
+      height:45px;
+      background: #DC002E;
+      border-radius: 5px;
+      position: absolute;
+      bottom: 5px;
+      left: 7.5%;
+    }
+    .phoneBox p{
+      padding:0;
+      margin: 3px;
+      font-size:14px;
+      color: #fff;
+    }
+    .phoneBox p a{
+      color: #fff;
+      text-decoration: none;
+    }
+    .editNameBox{
+      width:100%;
+      padding:10px 0 0 0;
+      text-align:center;
+    }
+    .editNameBox div{
+      width:52%;
+      height: 35px;
+      border:1px solid #000;
+      border-radius: 5px;
+      text-align:center;
+      line-height: 35px;
+      margin:15px auto;
+    }
+    .editNameBox p{
+      width:86%;
+      margin-left: 7%;
+      border-top: 1px solid #DC002E;
+      padding:0;
+      font-size:12px;
+      text-align:left;
+      padding-top: 5px;
+      margin-top: 25px;
+    }
+    .moduleBox{
+      width:100%;
+      height: 100%;
+      position: fixed;
+      top:0;
+      left: 0;
+      background: rgba(0,0,0,0.7);
+      display: none;
+    }
+    .imgBox{
+      width:86%;
+      height: 80%;
+      overflow: hidden;
+      position: absolute;
+      top:50%;
+      left: 50%;
+      transform: translate(-50%,-50%);
+      padding-top: 25px;
+      background: url("images/codeImg.png") 0 0 no-repeat;
+      background-size: 100% 100%;
+      /*background: #fff;*/
+    }
+    .imgBox .moduImg{
+      width:100%;
+    }
+    .delete{
+      width:25px;
+      position: absolute;
+      top:0px;
+      right: 0px;
+    }
+
+
+
+    .codeImg{
+      width:200px;
+      height: 200px;
+      margin:20px auto;
+      border:1px solid #000;
+    }
+    .imgBox h3,.imgBox h4,.imgBox h6{
+      width:100%;
+      text-align: center;
+    }
+    .imgBox h3{
+      color: #4A4A4A;
+    }
+    .imgBox h4{
+      color:#9C9C9C
+    }
+    .imgBox h6{
+      margin:0;
+      margin-top: 10px;
+    }
+    .codecar{
+      position: absolute;
+      width:58%;
+      bottom: 0;
+      right: 0;
+    }
+  </style>
+</head>
+<body>
+  <div class="customBox">
+     <img src="images/logoLeft.png" class="logoLeft"/>
+     <img src="images/logoRight.png" class="logoRight"/>
+     <img src="images/h5(5)/solg.png" style="width: 60%;position: absolute;left: 6.75%;top: 25.5%;"/>
+     <div class="mainText">
+       <div class="title">
+         <img src="images/H5(5)/1.png"/>
+         <span>个人中心</span>
+         <span style="float: right;font-size:13px;margin-right: 15px;">付款状态：未付款</span>
+       </div>
+       <div class="editName">
+          <div class="editNameBox">
+              <div>个人信息修改</div>
+              <div onclick="scode()">签到二维码</div>
+              <p>*请您尽快完整填写信息及付款，谢谢您的配合！</p>
+          </div>
+       </div>
+     </div>
+     <div class="returnBox">
+       <img src="images/siteinfo/4.png" class="mettingP"/>
+       <img src="images/siteinfo/5.png" class="return"/>
+     </div>
+     <div class="phoneBox">
+       <p style="margin-left: 20px;">会务组联系方式：<a href="tel:15821133060">158-2113-3060</a></p>
+       <p style="margin-left: 132px;"><a href="tel:15921658801">159-2165-8801</a></p>
+     </div>
+  </div>
+
+  <!-- 弹窗 -->
+  <div class="moduleBox">
+     <div class="imgBox">
+      <!--  <img src="images/H5(5)/code.png" class="moduImg"/> -->
+      <h3>李志达，你好</h3>
+      <h4>以下是你的二维码</h4>
+      <div class="codeImg">
+        <img src="images/H5(5)/code.png" class="moduImg"/>
+      </div>
+      <h6>签到码：01010101</h6>
+       <img src="images/siteinfo/delete.png" class="delete"/>
+       <img src="images/codecar.png" class="codecar" />
+     </div>
+  </div>
+
+
+<script src="js/jquery.js"></script>
+<script>
+// 隐藏弹窗
+$(".delete").click(function(){
+  $(".moduleBox").hide();
+})
+// 二维码扫描
+function scode(){
+  $(".moduleBox").show();
+}
+ //返回首页
+$(".return").click(function(){
+    window.location.href="menu.html";
+})
+//参会报名
+$(".mettingP").click(function(){
+    window.location.href="mettingenlist.html"
+})
+
+</script>
+</body>
+</html>

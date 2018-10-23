@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8"/>
+    <title>东风雪铁龙-个人中心</title>
+    <!-- 设置 viewport -->
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" />
+    <!-- IE -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <!-- 兼容国产浏览器的高速模式 -->
+    <meta name="renderer" content="webkit"/>
+    <meta name="Author" content="fans_m@163.com" />
+    <meta name="Keywords" content="会腾软件" />
+    <meta name="Description" content="会腾定制" />
+
+
+  <style type="text/css">
+    html,body{
+      width:100%;
+      height: 100%;
+      margin:0;
+      padding:0;
+    }
+    .customBox{
+      width:100%;
+      height: 100%;
+      position:relative;
+      background: url('images/H5(5)/22.png') 0 0 no-repeat;
+      background-size: 100% 100%;
+    }
+    .logoLeft{
+      width: 25.3%;
+      position: absolute;
+      top: 6.7%;
+      left: 7%;
+    }
+    .logoRight{
+      width: 21%;
+      position: absolute;
+      top: 3.7%;
+      right: 7%;
+    }
+    .mainText{
+      width:86.5%;
+      /*height: */
+      position: absolute;
+      left: 6.75%;
+      top:28.5%;
+      background: #fff;
+      border-radius: 5px;
+      border: 1px solid #b9b9cd;
+    }
+    .title{
+      width:100%;
+      height: 35px;
+      background:#DC002E;
+      border-radius: 5px 5px 0 0;
+      color: #fff;
+      line-height: 35px;
+    }
+    .title img{
+      height:18px;
+      margin-left: 15px;
+      vertical-align: top;
+      margin-top: 8px;
+    }
+    .title span{
+      font-size: 18px;
+      margin-left: 10px;
+    }
+    .editName {
+        margin-top: 40px;
+        margin-bottom: 25px;
+    }
+    .editName, .editNumber {
+        text-align: center;
+    }
+    .returnBox {
+      width: 19.5%;
+      position: absolute;
+      bottom: 60px;
+      right: 7.5%;
+    }
+    .editName input, .editNumber input {
+      width: 190px;
+      height: 25px;
+      border-radius: 10px;
+      border: 1px solid #ccc;
+      text-align: center;
+      outline-style: none;
+      margin-left: 5px;
+      font-size: 16px;
+   }
+   .editName span, .editNumber span {
+      width: 60px;
+      text-align:center;
+      display: inline-block;
+   }
+    .return, .mettingP {
+      width: 100%;
+      display: block;
+    }
+    .mettingP {
+      margin-bottom: 5px;
+    }
+    .phoneBox{
+      width:85%;
+      height:45px;
+      background: #DC002E;
+      border-radius: 5px;
+      position: absolute;
+      bottom: 5px;
+      left: 7.5%;
+    }
+    .phoneBox p{
+      padding:0;
+      margin: 3px;
+      font-size:14px;
+      color: #fff;
+    }
+    .phoneBox p a{
+      color: #fff;
+      text-decoration: none;
+    }
+    .editNameBox{
+      width:100%;
+      padding:10px 0 0 0;
+      text-align:center;
+    }
+    .editNameBox div{
+      width:52%;
+      height: 35px;
+      border:1px solid #000;
+      border-radius: 5px;
+      text-align:center;
+      line-height: 35px;
+      margin:15px auto;
+    }
+    .warning{
+      width:86%;
+      margin-left: 7%;
+      border-top: 1px solid #DC002E;
+      padding:0;
+      font-size:12px;
+      text-align:left;
+      padding-top: 5px;
+      margin-top: 25px;
+    }
+    .moduleBox{
+      width:100%;
+      height: 100%;
+      position: fixed;
+      top:0;
+      left: 0;
+      background: rgba(0,0,0,0.7);
+      display: none;
+    }
+    .imgBox{
+      width:86%;
+      overflow: hidden;
+      position: absolute;
+      top:50%;
+      left: 50%;
+      transform: translate(-50%,-50%);
+      padding-top: 25px;
+    }
+    .imgBox .moduImg{
+      width:100%;
+    }
+    .delete{
+      width:25px;
+      position: absolute;
+      top:0px;
+      right: 0px;
+    }
+    .makeSure{
+      width: 100px;
+      height: 35px;
+      background: #DC002E;
+      text-align: center;
+      line-height: 35px;
+      position: absolute;
+      color: #fff;
+      border-radius: 5px;
+      position: absolute;
+      top: 72%;
+      left: 50%;
+      transform: translate(-50%,0%);
+    }
+  </style>
+</head>
+<body>
+  <div class="customBox">
+     <img src="images/logoLeft.png" class="logoLeft"/>
+     <img src="images/logoRight.png" class="logoRight"/>
+      <img src="images/actinf/slog.png" style="width: 60%;position: absolute;left: 6.75%;top: 25.5%;"/>
+     <div class="mainText">
+       <div class="title">
+         <img src="images/H5(5)/1.png"/>
+         <span>个人中心</span>
+       </div>
+       <div class="editName">
+          <div class="editName">
+            <span>姓&nbsp;名</span>
+            <input type="text" placeholder="字段输入"/>
+          </div>
+          <div class="editNumber">
+            <span>手机号</span>
+            <input type="text" placeholder="字段输入"/>
+          </div>
+          <p class="warning">*请您进行注册报名之后再查看个人中心。</p>
+       </div>
+     </div>
+     <div class="makeSure">确认提交</div>
+     <div class="returnBox">
+       <img src="images/siteinfo/4.png" class="mettingP"/>
+       <img src="images/siteinfo/5.png" class="return"/>
+     </div>
+     <div class="phoneBox">
+       <p style="margin-left: 20px;font-size:12px;margin-top:15px;">会务组联系方式：<a href="tel:130111111">130-1111-1111</a><a href="tel:15921658801" style="margin-left: 5px;">130-1111-1111</a></p>
+       <!-- <p style="margin-left: 132px;"><a href="tel:15921658801">130-1111-1111</a></p> -->
+     </div>
+  </div>
+
+  <!-- 弹窗 -->
+  <div class="moduleBox">
+     <div class="imgBox">
+       <img src="images/H5(5)/code.png" class="moduImg"/>
+       <img src="images/siteinfo/delete.png" class="delete"/>
+     </div>
+  </div>
+
+
+<script src="js/jquery.js"></script>
+<script>
+// 隐藏弹窗
+$(".delete").click(function(){
+  $(".moduleBox").hide();
+})
+// 二维码扫描
+function scode(){
+  $(".moduleBox").show();
+}
+ //返回首页
+$(".return").click(function(){
+    window.location.href="menu.html";
+})
+//参会报名
+$(".mettingP").click(function(){
+    window.location.href="mettingenlist.html"
+})
+
+
+
+$(function () {
+    var u = navigator.userAgent, app = navigator.appVersion;
+    var isAndroid = u.indexOf('Android') > -1 || u.indexOf('Linux') > -1; //g
+    var isIOS = !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/); //ios终端
+    if (isAndroid) {
+       //这个是安卓操作系统
+        var wHeight1 = window.innerHeight;   //获取初始可视窗口高度
+        $(window).resize(function(){
+          var wHeight3 = window.innerHeight;
+          if(wHeight3 < wHeight1){
+            $(".phoneBox,.subBtn,.return,.makeSure").hide();
+          }else if(wHeight3 == wHeight1){
+            $(".phoneBox,.subBtn,.return,.makeSure").show();
+          }
+        })
+    }
+    if (isIOS) {
+　　　　//这个是ios操作系统
+    }
+});
+
+</script>
+</body>
+</html>

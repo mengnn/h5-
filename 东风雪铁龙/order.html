@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8"/>
+    <title>东风雪铁龙-订单详情</title>
+    <!-- 设置 viewport -->
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" />
+    <!-- IE -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <!-- 兼容国产浏览器的高速模式 -->
+    <meta name="renderer" content="webkit"/>
+    <meta name="Author" content="fans_m@163.com" />
+    <meta name="Keywords" content="会腾软件" />
+    <meta name="Description" content="会腾定制" />
+
+
+  <style type="text/css">
+    html,body{
+      width:100%;
+      height: 100%;
+      margin:0;
+      padding:0;
+    }
+    .customBox{
+      width:100%;
+      height: 100%;
+      position:relative;
+      background: url('images/H5(5)/33.png') 0 0 no-repeat;
+      background-size: 100% 100%;
+    }
+    .logoLeft{
+      width: 25.3%;
+      position: absolute;
+      top: 6.7%;
+      left: 7%;
+    }
+    .logoRight{
+      width: 21%;
+      position: absolute;
+      top: 3.7%;
+      right: 7%;
+    }
+    .mainText{
+      width:86.5%;
+      /*height: */
+      position: absolute;
+      left: 6.75%;
+      top:28.5%;
+      background: #fff;
+      border-radius: 5px;
+      border: 1px solid #b9b9cd;
+    }
+    .title{
+      width:100%;
+      height: 35px;
+      background:#148CB4;
+      border-radius: 5px 5px 0 0;
+      color: #fff;
+      line-height: 35px;
+    }
+    .title img{
+      height:18px;
+      margin-left: 15px;
+      vertical-align: top;
+      margin-top: 8px;
+    }
+    .title span{
+      font-size: 18px;
+      margin-left: 10px;
+    }
+    .editName {
+        margin-top: 40px;
+        margin-bottom: 25px;
+    }
+    .returnBox {
+      width: 19.5%;
+      position: absolute;
+      bottom: 30px;
+      right: 7.5%;
+    }
+    .return, .mettingP {
+      width: 100%;
+      display: block;
+    }
+    .mettingP {
+      margin-bottom: 5px;
+    }
+    .warning{
+      width:86%;
+      margin-left: 7%;
+      border-top: 1px solid #DC002E;
+      padding:0;
+      font-size:12px;
+      text-align:left;
+      padding-top: 5px;
+      margin-top: 25px;
+    }
+    .makeSure{
+      width: 100px;
+      height: 35px;
+      background: #148CB4;
+      text-align: center;
+      line-height: 35px;
+      position: absolute;
+      color: #fff;
+      border-radius: 5px;
+      position: absolute;
+      top: 80%;
+      left: 50%;
+      transform: translate(-50%,0%);
+    }
+    .orderTable{
+      width:86%;
+      overflow: hidden;
+      border-collapse: collapse;
+      margin-left: 7%;
+    }
+    .orderTable tr td,.orderTable tr th{
+      border-bottom: 1px solid #ccc;
+      text-align:left;
+      font-size:13px;
+      padding:5px 0;
+    }
+    .pay{
+      width:86%;
+      overflow: hidden;
+      margin:0;
+      padding:0;
+      margin-left: 7%;
+      margin-top: 15px;
+      margin-bottom: 15px;
+    }
+    .pay div,.pay li{
+      width:100%;
+      border-bottom: 1px solid #ccc;
+      height: 30px;
+      line-height: 30px;
+      list-style: none;
+    }
+    .pay li img{
+      height:25px;
+      vertical-align: top;
+      margin-top:2.5px;
+    }
+    .pay li label{
+      font-size:13px;
+      display: inline-block;
+      width:80px;
+      margin-right: 5px;
+      margin-left: 5px;
+    }
+    .pay li input{
+      vertical-align: top;
+     margin-top: 8px;
+    }
+  </style>
+</head>
+<body>
+  <div class="customBox">
+     <img src="images/logoLeft.png" class="logoLeft"/>
+     <img src="images/logoRight.png" class="logoRight"/>
+     <img src="images/h5(5)/solgb.png" style="width: 60%;position: absolute;left: 6.75%;top: 25.5%;"/>
+     <div class="mainText">
+       <div class="title">
+         <img src="images/H5(5)/2.png"/>
+         <span>订单详情</span>
+       </div>
+       <table class="orderTable">
+          <thead>
+            <tr>
+              <th>名称</th>
+              <th>单价</th>
+              <th>数量</th>
+              <th>总价</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>单人房间费</td>
+              <td>900</td>
+              <td>1</td>
+              <td>900.00</td>
+            </tr>
+            <tr>
+              <td colspan="3" style="border-bottom: 0;text-align:left;">合计金额</td>
+              <td style="border-bottom: 0;text-align:left;">900.00</td>
+            </tr>
+          </tbody>
+       </table>
+       <ul class="pay">
+        <div>支付方式<span style="font-size:12px;">（*微信打开网站仅限用微信支付）</span></div>
+         <li>
+           <input type="radio" name="pay" checked="checked" id="wechat"/>
+           <label for="wechat">微信（推荐）</label>
+           <img src="images/H5(5)/3.png"/>
+         </li>
+         <li style="border-bottom:0;">
+           <input type="radio" name="pay" id="alipay"/>
+           <label for="alipay">支付宝</label>
+           <img src="images/H5(5)/4.png"/>
+         </li>
+       </ul>
+       <p style="width:86%;font-size:12px;margin:0 7% 5px 7%;">
+        *如需银行卡转账支付，请在转账的时候备注（姓名+联系方式+单人间/双人间） <br>
+       银行信息：招商银行  殷豪  6226 0902
+      </p>
+     </div>
+     <div class="makeSure">确认提交</div>
+     <div class="returnBox">
+       <img src="images/siteinfo/4.png" class="mettingP"/>
+       <img src="images/siteinfo/5.png" class="return"/>
+     </div>
+  </div>
+
+
+
+<script src="js/jquery.js"></script>
+<script>
+ //返回首页
+$(".return").click(function(){
+    window.location.href="menu.html";
+})
+//参会报名
+$(".mettingP").click(function(){
+    window.location.href="mettingenlist.html"
+})
+
+</script>
+</body>
+</html>

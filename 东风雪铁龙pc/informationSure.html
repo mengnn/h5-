@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <title>东风雪铁龙-基本信息</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1"/>
+  <!-- 兼容国产浏览器的高速模式 -->
+  <meta name="renderer" content="webkit"/>
+  <meta name="Author" content="fans_m@163.com" />
+  <meta name="Keywords" content="会腾软件" />
+  <meta name="Description" content="会腾定制" />
+  <link type="text/css" rel="stylesheet" href="js/time/jeDate-test.css"/>
+  <link type="text/css" rel="stylesheet" href="js/time/skin/jedate.css"/>
+
+  <style type="text/css">
+    html,body{
+      width: 100%;
+      height: 100%;
+      margin:0;
+      padding:0;
+      min-width: 1200px;
+    }
+    .mainBox{
+      width:100%;
+      height: 100%;
+      background: url('images/PC(3)/bg.png') 0 0 no-repeat;
+      background-size: 100% 100%;
+    }
+    .mainTop{
+      width:100%;
+      height: 80px;
+      background: url(images/topBtn.png) 0 0 no-repeat;
+      background-size: 100% 100%;
+      margin:0;
+      padding:0;
+      list-style: none;
+    }
+    .mainTop li{
+      float: left;
+      width:19.7%;
+      height: 35px;
+      border-right: 1px solid #ccc;
+      margin-top: 22.5px;
+    }
+    .mainTop li.topBtn{
+      width:12%;
+      cursor: pointer;
+    }
+    .mainTop li.topBtn p{
+      margin:0;
+      padding:0;
+      width:100%;
+      text-align: center;
+    }
+    .mainTop li.topBtnAct p{
+      color:#148CB4;
+    }
+    .mainTop li:first-child img{
+        margin-left: 15%;
+        margin-top: 10px;
+    }
+    .mainTop li:last-child{
+      border-right: 0;
+    }
+    .mainTop li:last-child img{
+      float: right;
+      margin-right: 15%;
+      margin-top: 3px;
+      width:50px;
+    }
+    .returnBox{
+      width: 8.5%;
+      position: absolute;
+      bottom: 60px;
+      right: 7.5%;
+    }
+    .returnBox img{
+      width:100%;
+      cursor: pointer;
+    }
+    .phoneBox{
+      height: 45px;
+      background: #148CB4;
+      border-radius: 5px;
+      position: absolute;
+      bottom: 1px;
+      right: 7.5%;
+      padding:0 20px;
+      color: #fff;
+    }
+    .phoneBox p a {
+        color: #fff;
+        text-decoration: none;
+        margin-right: 10px;
+    }
+    .infoBox{
+      position: absolute;
+      top:40%;
+      left: 50%;
+      transform: translate(-50%,-40%);
+      width:920px;
+      overflow: hidden;
+      background: #fff;
+      border-radius: 9px;
+      padding-bottom: 20px;
+      border: 1px solid #b9b9cd;
+      border-radius: 17px 17px 5px 5px;
+    }
+    .title {
+      width: 100%;
+      height: 40px;
+      background: #148CB4;
+      border-radius: 10px 10px 0 0;
+      color: #fff;
+      line-height: 40px;
+    }
+    .title ul{
+      margin:0;
+      padding:0;
+      list-style: none;
+    }
+    .title ul li{
+      float: left;
+      width:33.3%;
+      height: 100%;
+    }
+    .title img {
+      height: 25px;
+      margin-left: 15px;
+      vertical-align: top;
+      margin-top: 8px;
+    }
+    .title span {
+      font-size: 18px;
+      margin-left: 10px;
+    }
+    .informationUl{
+      width:100%;
+      overflow-y: auto;
+      margin:0;
+      padding:0;
+      height: 517px;
+    }
+    .informationUl li{
+      float: left;
+      width:33.3%;
+      overflow: hidden;
+    }
+    .mainText1,.mainText2,.mainText3{
+      width:100%;
+      margin-top: 10px;
+      overflow: hidden;
+    }
+    .infName,.infSex,.infPhone,.infInfor,.infPost,.infMail,.infCity,.infHotel,.hotelInput,.infTraffic,.infTraffic2{
+      text-align: center;
+    }
+    .infName{
+      margin-top: 35px;
+      margin-bottom: 15px;
+    }
+    .infHotel,.hotelInput,.infTraffic,.infTraffic2{
+      margin-bottom: 15px;
+    }
+    .infSex,.infPhone,.infInfor,.infPost,.infMail{
+      margin-bottom: 15px;
+    }
+    .infName input,.infPhone input,.infInfor input,.infPost input,.infMail input,.hotelInput input,.infTraffic input{
+      width:160px;
+      height: 25px;
+      border-radius: 10px;
+      border:1px solid #ccc;
+      text-align:center;
+      outline-style: none;
+      margin-left:5px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+    .infSex select,.infHotel select,.infTraffic select{
+      width:160px;
+      height: 25px;
+      border-radius: 10px;
+      border:1px solid #ccc;
+      outline-style: none;
+      margin-left:5px;
+      font-size: 16px;
+      text-align: center;
+      text-align-last: center;
+      background: #fff;
+      cursor: pointer;
+    }
+    .infCity div,.infHotel div,.infTraffic2 div{
+      width:160px;
+      height: 25px;
+      display: inline-block;
+    }
+    .infName span,.infSex span,.infPhone span,.infInfor span,.infPost span,.infMail span,.infCity span,.infHotel span,.hotelInput span,.infTraffic span,.infTraffic2 span {
+      width:65px;
+      text-align:center;
+      display: inline-block;
+    }
+    .infBtn{
+      width:100%;
+      overflow: hidden;
+      text-align:center;
+      margin-top: 20px;
+    }
+    .infBtn div{
+      width:120px;
+      height: 40px;
+      background:#148CB4;
+      text-align:center;
+      line-height: 40px;
+      color: #fff;
+      border-radius: 5px;
+      display: inline-block;
+      margin:0 10px;
+      cursor: pointer;
+    }
+    .returnBox{
+      width: 8.5%;
+      position: absolute;
+      bottom: 60px;
+      right: 7.5%;
+    }
+    .addPerson{
+      width:100%;
+      margin-bottom: 5px;
+      display: block;
+    }
+    .return{
+      width:100%;
+      margin-bottom: 20px;
+      display: block;
+    }
+    .phoneBox{
+      height: 45px;
+      background: #148CB4;
+      border-radius: 5px;
+      position: absolute;
+      bottom: 1px;
+      right: 7.5%;
+      padding: 0 20px;
+      color: #fff;
+    }
+    .phoneBox p{
+      font-size:16px;
+      color: #fff;
+      padding:10px 0;
+    }
+    .phoneBox p a {
+        color: #fff;
+        text-decoration: none;
+        margin-right: 10px;
+    }
+    :-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+      color: #000;
+      font-size: 16px;
+    }
+    ::-moz-placeholder { /* Mozilla Firefox 19+ */
+      color: #000;
+      font-size: 16px;
+    }
+    input:-ms-input-placeholder,
+    textarea:-ms-input-placeholder {
+      color: #000;
+      font-size: 16px;
+    }
+    input::-webkit-input-placeholder {
+      color: #000;
+      font-size: 16px;
+    }
+    .f-srcollOne::-webkit-scrollbar-track{
+      -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+      border-radius: 1px;
+      background-color: #F5F5F5;
+    }
+    .f-srcollOne::-webkit-scrollbar{
+      width: 1px;
+      background-color: #F5F5F5;
+    }
+    .f-srcollOne::-webkit-scrollbar-thumb{
+      border-radius: 1px;
+      -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+      background-color: #CCCCCC;
+    }
+  </style>
+</head>
+<body>
+  <div class="mainBox">
+    <ul class="mainTop">
+      <li>
+        <img src="images/logo1.png"/>
+      </li>
+      <li class="topBtn " dir="1">
+        <p>活 动 信 息</p>
+        <p>你·掌舵人</p>
+      </li>
+      <li class="topBtn " dir="2">
+        <p>场 地 信 息</p>
+        <p>你·探索家 </p>
+      </li>
+      <li class="topBtn" dir="3">
+        <p>友 情 提 示</p>
+        <p>你·守护者 </p>
+      </li>
+      <li class="topBtn " dir="4">
+        <p>直 播 通 道</p>
+        <p>你·视听控</p>
+      </li>
+      <li class="topBtn topBtnAct" dir="5">
+        <p>参 会 报 名 </p>
+        <p>你·行动派</p>
+      </li>
+      <li>
+        <img src="images/logo2.png"/>
+      </li>
+    </ul>
+    <div class="infoBox">
+      <div class="title">
+         <ul>
+          <li>
+            <img src="images/PC(3)/icon1.png"/>
+            <span>基本信息</span>
+          </li>
+          <li>
+            <img src="images/PC(3)/icon2.png"/>
+            <span>酒店信息</span>
+          </li>
+          <li>
+            <img src="images/PC(3)/icon3.png"/>
+            <span>交通信息</span>
+          </li>
+        </ul>
+      </div>
+      <ul class="informationUl f-srcollOne">
+        <li>
+          <div class="mainText1">
+             <div class="infName">
+                <span>姓&nbsp;名</span>
+                <input type="text" placeholder="点击填写" value="李志达" disabled="disabled"/>
+             </div>
+             <div class="infSex">
+                <span>性&nbsp;别</span>
+                <select disabled="disabled">
+                  <option>男</option>
+                </select>
+             </div>
+             <div class="infPhone">
+                <span>电&nbsp;话</span>
+                <input type="text" placeholder="点击填写" value="189****1234" disabled="disabled"/>
+             </div>
+             <div class="infInfor">
+                <span>证件信息</span>
+                <input type="text" placeholder="点击填写" value="532527*****1715" disabled="disabled"/>
+             </div>
+             <div class="infPost">
+                <span>职&nbsp;位</span>
+                <input type="text" placeholder="点击填写" value="总经理" disabled="disabled"/>
+             </div>
+             <div class="infMail">
+                <span>邮&nbsp;箱</span>
+                <input type="text" placeholder="点击填写" value="lizhida@163.com" disabled="disabled"/>
+             </div>
+             <div class="infCity">
+                <span>区&nbsp;域</span>
+                <div>
+                  <input type="radio" name="city" id="hYES" disabled="disabled" checked="checked"/>
+                  <label for="hYES" style="margin-right: 10px;">杭州</label>
+                  <input type="radio" name="city" id="cNO" disabled="disabled"/>
+                  <label for="cNO">非杭州</label>
+                </div>
+             </div>
+          </div>
+        </li>
+        <li>
+          <div class="mainText2">
+             <div class="infHotel" style="margin-top: 35px;">
+                <span>是否住宿</span>
+                <select disabled="disabled">
+                  <option>是</option>
+                </select>
+             </div>
+             <div class="infHotel">
+                <span>房型选择</span>
+                <select disabled="disabled">
+                  <option>双人间</option>
+                </select>
+             </div>
+             <p style="font-size:12px;width:70%;margin-left: 15%;">*如选择双人房，会务组会进行随机拼房，并共同承担房费。</p>
+             <div class="infHotel">
+                <span>餐饮选择</span>
+                <select disabled="disabled">
+                  <option>9月19日午餐</option>
+                </select>
+             </div>
+             <div class="infHotel">
+                <span>是否开票</span>
+                <div>
+                  <input type="radio" name="ticket" id="tYES" disabled="disabled"/>
+                  <label for="tYES" style="margin-right: 20px;">是</label>
+                  <input type="radio" name="ticket" id="tNO" disabled="disabled"/>
+                  <label for="tNO">否</label>
+                </div>
+             </div>
+             <p style="margin-left:130px;">开票信息</p>
+             <div class="hotelInput">
+                <span> 单位名称</span>
+                <input type="text" placeholder="点击填写" value="上海瀚势广告" disabled="disabled"/>
+             </div>
+             <div class="hotelInput">
+                <span>税&nbsp;号</span>
+                <input type="text" placeholder="点击填写" value="921*******69E" disabled="disabled"/>
+             </div>
+             <div class="hotelInput">
+                <span>单位地址</span>
+                <input type="text" placeholder="点击填写" value="上海市***1818室" disabled="disabled"/>
+             </div>
+             <div class="hotelInput">
+                <span>电话号码</span>
+                <input type="text" placeholder="点击填写" value="189****1234" disabled="disabled"/>
+             </div>
+             <div class="hotelInput">
+                <span>开户银行</span>
+                <input type="text" placeholder="点击填写" value="上海****支行" disabled="disabled"/>
+             </div>
+             <div class="hotelInput">
+                <span>银行账户</span>
+                <input type="text" placeholder="点击填写" value="3850******888" disabled="disabled"/>
+             </div>
+          </div>
+        </li>
+        <li>
+          <div class="mainText3">
+             <div class="infTraffic" style="margin-top: 35px;">
+                <span>交通方式</span>
+                <select disabled="disabled">
+                  <option>飞机</option>
+                </select>
+             </div>
+             <div class="infTraffic jeitem" >
+                <span>到达日期</span>
+                <div class="jeinpbox" style="width: 166px;">
+                  <input type="text" class="jeinput" id="test03" placeholder="点击选择" style="width: 160px;height: 25px;border-radius: 10px;text-align: center;" value="09-18" disabled="disabled"/>
+                </div>
+             </div>
+             <p style="margin-left: 130px;margin-bottom: 10px;font-size:16px;">来程信息</p>
+             <div class="infTraffic">
+                <span> 航班/车次</span>
+                <input type="text" placeholder="点击填写" value="FM5793" disabled="disabled"/>
+             </div>
+              <div class="infTraffic jeitem" >
+                  <span>到达时间</span>
+                  <div class="jeinpbox" style="width: 166px;">
+                    <input type="text" class="jeinput" id="test05" placeholder="点击选择" style="width: 160px;height: 25px;border-radius: 10px;text-align: center;" value="14：40" disabled="disabled"/>
+                  </div>
+               </div>
+               <div class="infTraffic">
+                  <span>到达地点</span>
+                  <select disabled="disabled">
+                    <option>萧山机场</option>
+                  </select>
+               </div>
+               <div class="infTraffic2">
+                  <span>接机安排</span>
+                  <div>
+                    <input type="radio" name="traffic" id="rYES" disabled="disabled" checked="checked"/>
+                    <label for="rYES" style="margin-right: 20px;">是</label>
+                    <input type="radio" name="traffic" id="rNO" disabled="disabled"/>
+                    <label for="rNO">否</label>
+                  </div>
+               </div>
+               <div class="infTraffic">
+                  <span>送机时间</span>
+                  <select disabled="disabled">
+                    <option>12:00-13:00</option>
+                  </select>
+               </div>
+               <p style="margin-left: 130px;margin-bottom: 10px;font-size:16px;">返程信息</p>
+               <div class="infTraffic">
+                  <span> 航班/车次</span>
+                  <input type="text" placeholder="点击填写" value="G8766" disabled="disabled"/>
+               </div>
+              <div class="infTraffic jeitem" >
+                  <span>出发时间</span>
+                  <div class="jeinpbox" style="width: 166px;">
+                    <input type="text" class="jeinput" id="test055" placeholder="点击选择" style="width: 160px;height: 25px;border-radius: 10px;text-align: center;" value="14：45" disabled="disabled"/>
+                  </div>
+              </div>
+              <div class="infTraffic">
+                  <span>出发地点</span>
+                  <select disabled="disabled">
+                    <option>萧山机场</option>
+                  </select>
+               </div>
+               <div class="infTraffic2">
+                  <span>送机安排</span>
+                  <div>
+                    <input type="radio" name="traffic1" id="rYES" checked="checked" disabled="disabled"/>
+                    <label for="rYES" style="margin-right: 20px;">是</label>
+                    <input type="radio" name="traffic1" id="rNO" disabled="disabled"/>
+                    <label for="rNO">否</label>
+                  </div>
+               </div>
+               <div class="infTraffic">
+                  <span>送机时间</span>
+                  <select disabled="disabled">
+                    <option>12:00-13:00</option>
+                  </select>
+               </div>
+            </div>
+        </li>
+      </ul>
+      <div class="infBtn">
+        <div>保存提交</div>
+        <div>返回修改</div>
+      </div>
+
+    </div>
+    <!-- 个人中心 -->
+    <div class="returnBox">
+       <img src="images/actinfo/home.png" class="return"/>
+     </div>
+    <div class="phoneBox">
+       <p style="margin-left: 20px;">会务组联系方式：<a href="tel:15821133060">158-2113-3060</a><a href="tel:15921658801">159-2165-8801</a></p>
+     </div>
+  </div>
+
+  <script src="js/jquery.js"></script>
+  <script type="text/javascript" src="js/time/jquery.jedate.js"></script>
+  <script type="text/javascript" src="js/time/jedate-test.js"></script>
+
+  <!-- Initialize Swiper -->
+  <script>
+    <!-- 顶部导航选中 -->
+    $(".topBtn").click(function(){
+      $(this).addClass('topBtnAct').siblings().removeClass('topBtnAct');
+      var dir=$(this).attr("dir");
+      if(dir == "1"){
+        window.location.href='actinfo.html';
+      }else if(dir == "2"){
+        window.location.href='siteinfo.html';
+      }else if(dir == "3"){
+        window.location.href='hints.html';
+      }else if(dir == "4"){
+        window.location.href='live.html';
+      }else if(dir == "5"){
+        window.location.href='partici.html';
+      }
+    });
+    // 经销商报名
+    $(".dealerRegister").click(function(){
+      window.location.href="dealer.html";
+    });
+    // 合作伙伴报名
+    $(".partnerRegister").click(function(){
+      window.location.href="partner.html";
+    });
+    // dacd报名
+    $(".dacdRegister").click(function(){
+      window.location.href="dacd.html";
+    })
+    //informationUl 判断屏幕高度
+    var height=window.screen.height;
+    if(height <= 1080){
+      $(".informationUl").css("height","450px")
+    }if(height <= 900){
+      $(".informationUl").css("height","350px")
+    }if(height <= 768){
+      $(".informationUl").css("height","250px")
+    }
+
+
+    //返回首页
+    $(".return").click(function(){
+      window.location.href="index.html"
+    })
+
+  </script>
+</body>
+</html>

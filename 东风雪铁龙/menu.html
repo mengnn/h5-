@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8"/>
+    <title>东风雪铁龙-菜单选择</title>
+    <!-- 设置 viewport -->
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" />
+    <!-- IE -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <!-- 兼容国产浏览器的高速模式 -->
+    <meta name="renderer" content="webkit"/>
+    <meta name="Author" content="fans_m@163.com" />
+    <meta name="Keywords" content="会腾软件" />
+    <meta name="Description" content="会腾定制" />
+
+
+  <style type="text/css">
+    html,body{
+      width:100%;
+      height: 100%;
+      margin:0;
+      padding:0;
+    }
+    .customBox{
+      width:100%;
+      height: 100%;
+      position:relative;
+      background: url('images/H5(2)/bg.jpg') 0 0 no-repeat;
+      background-size: 100% 100%;
+    }
+    .logoLeft{
+      width: 25.3%;
+      position: absolute;
+      top: 6.7%;
+      left: 7%;
+    }
+    .logoRight{
+      width: 21%;
+      position: absolute;
+      top: 3.7%;
+      right: 7%;
+    }
+   .menuBox{
+    width:100%;
+    overflow: hidden;
+    margin:0;
+    padding:0;
+    position: absolute;
+    bottom:9%;
+    left: 0;
+   }
+   .menuBox li{
+    float:left;
+    width:44%;
+    overflow: hidden;
+    margin-left:4%;
+    list-style: none;
+    margin-bottom: 8px;
+   }
+   .menuBox li img{
+    width:100%;
+   }
+    .title{
+      width:100%;
+      height: 35px;
+      background:#148CB4;
+      border-radius: 5px 5px 0 0;
+      color: #fff;
+      line-height: 35px;
+    }
+    .title img{
+      height:18px;
+      margin-left: 15px;
+      vertical-align: top;
+      margin-top: 8px;
+    }
+    .title span{
+      font-size: 18px;
+      margin-left: 10px;
+    }
+    .subBtn{
+      width:100px;
+      height: 35px;
+      background:#148CB4;
+      text-align:center;
+      line-height: 35px;
+      position: absolute;
+      color: #fff;
+      border-radius: 5px;
+      position: absolute;
+      top:72%;
+      left: 50%;
+      transform: translate(-50%,0%);
+    }
+    .menuBtn{
+      width:19.5%;
+      position: absolute;
+      bottom:25px;
+      right:7.5%;
+    }
+
+  </style>
+</head>
+<body>
+  <div class="customBox">
+     <img src="images/logoLeft.png" class="logoLeft"/>
+     <img src="images/logoRight.png" class="logoRight"/>
+     <img src="images/menucar.png" style="width:84%;position: absolute;top:14%;left: 16%;" />
+     <ul class="menuBox">
+       <li dir="1"><img src="images/H5(2)/H5（2）2-pic1.png"/></li>
+       <li dir="2"><img src="images/H5(2)/H5（2）2-pic2.png"/></li>
+       <li dir="3"><img src="images/H5(2)/H5（2）2-pic3.png"/></li>
+       <li dir="4"><img src="images/H5(2)/H5（2）2-pic4.png"/></li>
+       <li dir="5"><img src="images/H5(2)/H5（2）3-pic5.png"/></li>
+       <li dir="6"><img src="images/H5(2)/H5（2）3-pic6.png"/></li>
+     </ul>
+     <img src="images/H5(2)/person.png" class="menuBtn"/>
+  </div>
+
+
+<script src="js/jquery.js"></script>
+<script>
+<!-- 六宫格 -->
+    $(".menuBox li").click(function(){
+      var dir=$(this).attr("dir");
+      if(dir == "1"){
+        window.location.href='actinf.html';
+      }else if(dir == "2"){
+        window.location.href='siteinf.html';
+      }else if(dir == "3"){
+        window.location.href='hints.html';
+      }else if(dir == "4"){
+        window.location.href='mettingenlist.html';
+      }else if(dir == "5"){
+        alert("暂未开放")
+        // window.location.href='livechannel.html';
+      }else if(dir == "6"){
+        alert("暂未开放")
+        // window.location.href='interaction.html';
+      }
+    });
+    // 个人中心
+    $(".menuBtn").click(function(){
+      window.location.href="personal2.html"
+    })
+
+</script>
+</body>
+</html>

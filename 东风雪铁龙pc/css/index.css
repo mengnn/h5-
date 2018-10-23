@@ -1,0 +1,154 @@
+html, body {
+  position: relative;
+  height: 100%;
+}
+body {
+  background: #eee;
+  font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  color:#000;
+  margin: 0;
+  padding: 0;
+}
+p{
+  padding:0;
+  margin:0;
+}
+.swiper-container {
+  width: 100%;
+  height: 100%;
+}
+.swiper-slide {
+  font-size: 18px;
+  background: #000000;
+  position: relative;
+
+  /* Center slide text vertically */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+}
+
+
+.swiperOne{
+  background: url(../images/pic1-bg.png) 0 0 no-repeat;
+  background-size: 100% 100%;
+}
+.swiperTwo{
+  background: url(../images/pic1-bg.png) 0 0 no-repeat;
+  background-size: 100% 100%;
+}
+.pic1Red{
+  width:25.3%;
+  position: absolute;
+  top:6.7%;
+  left: 7%;
+}
+.pic1Logo{
+  width:21%;
+  position: absolute;
+  top: 3.7%;
+  right: 7%;
+}
+.pic1Loading{
+  width:100%;
+  overflow: hidden;
+  position: absolute;
+  top:25%;
+  left: 0;
+}
+.pic1Loadingone,.pic1Loadingtwo{
+  width:100%;
+  overflow: hidden;
+  text-align: center;
+}
+.pic1-circle{
+  width:30%;
+}
+.pic1arrowP{
+  width:60%;
+  background: url('../images/pic1/pic1arrow.png') 0 0 no-repeat;
+  background-size: 100% 100%;
+  height: 20px;
+  margin-left: 20%;
+  margin-top: 15px;
+  text-align:left;
+  padding:3px 0;
+}
+.pic1arrowP span{
+  display: inline-block;
+  width:10%;
+  height: 100%;
+  background:url('../images/pic1/pic1-arrow.png') 0 0 no-repeat;
+  background-repeat: repeat-x;
+  margin-left: 14%;
+  margin-top: 1%
+  /*background-size: 100% 100%;*/
+}
+.pic1Loadingonediv{
+  width:100%;
+  overflow: hidden;
+  text-align:center;
+  line-height: 100%;
+  position: relative;
+}
+.pic1Loadingonediv p{
+  position: absolute;
+  top:50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  text-align:center;
+  color: #01FFFF;
+  font-size:20px;
+}
+.pic1car{
+  position: absolute;
+  bottom: 2%;
+  width: 28%;
+  left: 36%;
+}
+.pic2Box{
+  width:100%;
+  overflow: hidden;
+  position: absolute;
+  top:10%;
+  text-align:center;
+}
+.pic2Words{
+  width:86%;
+  display: none;
+}
+.pic2Words2{
+  width:72.6%;
+  display: none;
+}
+.startBox{
+  width:100%;
+  overflow: hidden;
+  position: relative;
+  text-align:center;
+  display: none;
+}
+.lightEffect{
+  width:72.6%;
+}
+.startBtn{
+  height: 100%;
+  position: absolute;
+  top:50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+.pic2Car{
+  width:26.6%;
+  display: none;
+}

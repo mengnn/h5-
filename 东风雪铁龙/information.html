@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>东风雪铁龙-基本信息</title>
+    <!-- 设置 viewport -->
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" />
+    <link type="text/css" rel="stylesheet" href="js/time/jeDate-test.css"/>
+    <link type="text/css" rel="stylesheet" href="js/time/skin/jedate.css"/>
+    <!-- IE -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- 兼容国产浏览器的高速模式 -->
+    <meta name="renderer" content="webkit">
+    <meta name="Author" content="fans_m@163.com" />
+    <meta name="Keywords" content="会腾软件" />
+    <meta name="Description" content="会腾定制" />
+
+
+  <style type="text/css">
+    html,body{
+      width:100%;
+      min-height: 100%;
+      margin:0;
+      padding:0;
+      background: url('images/information/bg.png') 0 0 no-repeat;
+    }
+    .customBox{
+      width:100%;
+      min-height: 100%;
+
+    }
+    .logoLeft{
+      width: 25.3%;
+      position: absolute;
+      top: 6.7%;
+      left: 7%;
+    }
+    .logoRight{
+      width: 21%;
+      position: absolute;
+      top: 3.7%;
+      right: 7%;
+    }
+    .mainTextbox{
+      position: absolute;
+      width:100%;
+      left: 0;
+      top:20%;
+    }
+    .mainText1,.mainText2,.mainText3{
+      width:86.5%;
+      margin-left:6.75%;
+      /*height: */
+      background: #fff;
+      border-radius: 5px;
+      padding-bottom: 25px;
+      margin-bottom: 30px;
+      border: 1px solid #b9b9cd;
+    }
+    .title{
+      width:100%;
+      height: 35px;
+      background:#148CB4;
+      border-radius: 5px 5px 0 0;
+      color: #fff;
+      line-height: 35px;
+    }
+    .title img{
+      height:20px;
+      margin-left: 15px;
+      vertical-align: top;
+      margin-top: 8px;
+    }
+    .title span{
+      font-size: 18px;
+      margin-left: 10px;
+    }
+    .infName,.infSex,.infPhone,.infInfor,.infPost,.infMail,.infCity,.infHotel,.hotelInput,.infTraffic,.infTraffic2{
+      text-align: center;
+    }
+    .infName{
+      margin-top: 35px;
+      margin-bottom: 15px;
+    }
+    .infHotel,.hotelInput,.infTraffic,.infTraffic2{
+      margin-bottom: 15px;
+    }
+    .infSex,.infPhone,.infInfor,.infPost,.infMail{
+      margin-bottom: 15px;
+    }
+    .infName input,.infPhone input,.infInfor input,.infPost input,.infMail input,.hotelInput input,.infTraffic input{
+      width:160px;
+      height: 25px;
+      border-radius: 10px;
+      border:1px solid #ccc;
+      text-align:center;
+      outline-style: none;
+      margin-left:5px;
+      font-size: 16px;
+    }
+    .infSex select,.infHotel select,.infTraffic select{
+      width:160px;
+      height: 25px;
+      /*border-radius: 20px;*/
+      border:1px solid #ccc;
+      outline-style: none;
+      margin-left:5px;
+      font-size: 16px;
+      text-align: center;
+      text-align-last: center;
+      background: #fff;
+    }
+    .infCity div,.infHotel div,.infTraffic2 div{
+      width:160px;
+      height: 25px;
+      display: inline-block;
+    }
+    .infName span,.infSex span,.infPhone span,.infInfor span,.infPost span,.infMail span,.infCity span,.infHotel span,.hotelInput span,.infTraffic span,.infTraffic2 span {
+      width:65px;
+      text-align:center;
+      display: inline-block;
+    }
+    .infBtn{
+      width:100%;
+      overflow: hidden;
+      text-align:center;
+      margin-bottom: 30px;
+    }
+    .infBtn div{
+      width:100px;
+      height: 35px;
+      background:#148CB4;
+      text-align:center;
+      line-height: 35px;
+      color: #fff;
+      border-radius: 5px;
+      display: inline-block;
+      margin:0 10px;
+    }
+    .returnBox{
+      float: right;
+      overflow: hidden;
+      width:19.5%;
+      margin-right: 7.5%;
+    }
+    .addPerson{
+      width:100%;
+      margin-bottom: 5px;
+      display: block;
+    }
+    .return{
+      width:100%;
+      margin-bottom: 20px;
+      display: block;
+    }
+    .phoneBox{
+      width:85%;
+      height:45px;
+      background: #148CB4;
+      border-radius: 5px;
+      float: right;
+      margin-right: 7.5%;
+      margin-bottom: 10px;
+    }
+    .phoneBox p{
+      padding:0;
+      margin: 3px;
+      font-size:14px;
+      color: #fff;
+    }
+    .phoneBox p a{
+      color: #fff;
+      text-decoration: none;
+    }
+    :-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+      color: #000;
+      font-size: 16px;
+    }
+    ::-moz-placeholder { /* Mozilla Firefox 19+ */
+      color: #000;
+      font-size: 16px;
+    }
+    input:-ms-input-placeholder,
+    textarea:-ms-input-placeholder {
+      color: #000;
+      font-size: 16px;
+    }
+    input::-webkit-input-placeholder {
+      color: #000;
+      font-size: 16px;
+    }
+  </style>
+</head>
+<body class="se">
+  <div class="customBox">
+     <img src="images/logoLeft.png" class="logoLeft"/>
+     <img src="images/logoRight.png" class="logoRight"/>
+     <div class="mainTextbox">
+       <img src="images/information/solg.png" style="width:62%;margin-left: 6.75%;"/>
+       <div class="mainText1">
+         <div class="title">
+           <img src="images/information/1.png"/>
+           <span>基本信息 </span>
+         </div>
+         <div class="infName">
+            <span>姓&nbsp;名</span>
+            <input type="text" placeholder="点击填写"/>
+         </div>
+         <div class="infSex">
+            <span>性&nbsp;别</span>
+            <select>
+              <option>点击选择</option>
+              <option>男</option>
+              <option>女</option>
+            </select>
+         </div>
+         <div class="infPhone">
+            <span>电&nbsp;话</span>
+            <input type="text" placeholder="点击填写"/>
+         </div>
+         <div class="infInfor">
+            <span>证件信息</span>
+            <input type="text" placeholder="点击填写"/>
+         </div>
+         <div class="infPost">
+            <span>职&nbsp;位</span>
+            <input type="text" placeholder="点击填写"/>
+         </div>
+         <div class="infMail">
+            <span>邮&nbsp;箱</span>
+            <input type="text" placeholder="点击填写"/>
+         </div>
+         <div class="infCity">
+            <span>区&nbsp;域</span>
+            <div>
+              <input type="radio" name="city" id="hYES"/>
+              <label for="hYES" style="margin-right: 10px;">杭州</label>
+              <input type="radio" name="city" id="cNO"/>
+              <label for="cNO">非杭州</label>
+            </div>
+         </div>
+       </div>
+       <img src="images/information/solg.png" style="width:62%;margin-left: 6.75%;"/>
+       <div class="mainText2">
+         <div class="title">
+           <img src="images/information/2.png"/>
+           <span>酒店信息 </span>
+         </div>
+         <div class="infHotel" style="margin-top: 35px;">
+            <span>是否住宿</span>
+            <select>
+              <option>点击选择</option>
+              <option>是</option>
+              <option>否</option>
+            </select>
+         </div>
+         <div class="infHotel">
+            <span>房型选择</span>
+            <select>
+              <option>点击选择</option>
+              <option>单人间</option>
+              <option>双人间</option>
+            </select>
+         </div>
+         <p style="font-size:12px;width:70%;margin-left: 15%;">*如选择双人房，会务组会进行随机拼房，并共同承担房费。</p>
+         <div class="infHotel">
+            <span>餐饮选择</span>
+            <select>
+              <option>点击选择</option>
+              <option>9月19日午餐</option>
+            </select>
+         </div>
+         <div class="infHotel">
+            <span>是否开票</span>
+            <div>
+              <input type="radio" name="ticket" id="tYES"/>
+              <label for="tYES" style="margin-right: 20px;">是</label>
+              <input type="radio" name="ticket" id="tNO"/>
+              <label for="tNO">否</label>
+            </div>
+         </div>
+         <p style="margin-left:130px;">开票信息</p>
+         <div class="hotelInput">
+            <span> 单位名称</span>
+            <input type="text" placeholder="点击填写"/>
+         </div>
+         <div class="hotelInput">
+            <span>税&nbsp;号</span>
+            <input type="text" placeholder="点击填写"/>
+         </div>
+         <div class="hotelInput">
+            <span>单位地址</span>
+            <input type="text" placeholder="点击填写"/>
+         </div>
+         <div class="hotelInput">
+            <span>电话号码</span>
+            <input type="text" placeholder="点击填写"/>
+         </div>
+         <div class="hotelInput">
+            <span>开户银行</span>
+            <input type="text" placeholder="点击填写"/>
+         </div>
+         <div class="hotelInput">
+            <span>银行账户</span>
+            <input type="text" placeholder="点击填写"/>
+         </div>
+       </div>
+       <img src="images/information/solg.png" style="width:62%;margin-left: 6.75%;"/>
+       <div class="mainText3">
+         <div class="title">
+           <img src="images/information/3.png"/>
+           <span>交通信息 </span>
+         </div>
+         <div class="infTraffic" style="margin-top: 35px;">
+            <span>交通方式</span>
+            <select>
+              <option>点击选择</option>
+              <option>火车</option>
+              <option>飞机</option>
+            </select>
+         </div>
+         <div class="infTraffic jeitem" >
+            <span>到达日期</span>
+            <div class="jeinpbox" style="width: 166px;">
+              <input type="text" class="jeinput" id="test03" placeholder="点击选择" style="width: 160px;height: 25px;border-radius: 20px;text-align: center;"/>
+            </div>
+         </div>
+         <p style="margin-left: 130px;margin-bottom: 10px;font-size:16px;">来程信息</p>
+         <div class="infTraffic">
+            <span> 航班/车次</span>
+            <input type="text" placeholder="点击填写"/>
+         </div>
+        <div class="infTraffic jeitem" >
+            <span>到达时间</span>
+            <div class="jeinpbox" style="width: 166px;">
+              <input type="text" class="jeinput" id="test05" placeholder="点击选择" style="width: 160px;height: 25px;border-radius: 20px;text-align: center;"/>
+            </div>
+         </div>
+         <div class="infTraffic">
+            <span>到达地点</span>
+            <select>
+              <option>点击选择</option>
+              <option>萧山机场</option>
+            </select>
+         </div>
+         <div class="infTraffic2">
+            <span>接机安排</span>
+            <div>
+              <input type="radio" name="traffic" id="rYES"/>
+              <label for="rYES" style="margin-right: 20px;">是</label>
+              <input type="radio" name="traffic" id="rNO"/>
+              <label for="rNO">否</label>
+            </div>
+         </div>
+         <div class="infTraffic">
+            <span>接机时间</span>
+            <select>
+              <option>点击选择</option>
+              <option>12:00-13:00</option>
+              <option>11:00-12:00</option>
+            </select>
+         </div>
+         <p style="margin-left: 130px;margin-bottom: 10px;font-size:16px;">返程信息</p>
+         <div class="infTraffic">
+            <span> 航班/车次</span>
+            <input type="text" placeholder="点击填写"/>
+         </div>
+        <div class="infTraffic jeitem" >
+            <span>出发时间</span>
+            <div class="jeinpbox" style="width: 166px;">
+              <input type="text" class="jeinput" id="test055" placeholder="点击选择" style="width: 160px;height: 25px;border-radius: 20px;text-align: center;"/>
+            </div>
+        </div>
+        <div class="infTraffic">
+            <span>出发地点</span>
+            <select>
+              <option>点击选择</option>
+              <option>萧山机场</option>
+              <option>虹桥机场</option>
+            </select>
+         </div>
+         <div class="infTraffic2">
+            <span>送机安排</span>
+            <div>
+              <input type="radio" name="traffic" id="rYES"/>
+              <label for="rYES" style="margin-right: 20px;">是</label>
+              <input type="radio" name="traffic" id="rNO"/>
+              <label for="rNO">否</label>
+            </div>
+         </div>
+         <div class="infTraffic">
+            <span>送机时间</span>
+            <select>
+              <option>点击选择</option>
+              <option>12:00-13:00</option>
+              <option>11:00-12:00</option>
+            </select>
+         </div>
+       </div>
+       <div class="infBtn">
+          <div>确认提交</div>
+          <div>返回修改</div>
+       </div>
+       <div class="returnBox">
+         <img src="images/information/addPerson.png" class="addPerson"/>
+         <img src="images/daad/return.png" class="return"/>
+       </div>
+       <div class="phoneBox">
+         <p style="margin-left: 20px;">会务组联系方式：<a href="tel:15821133060">158-2113-3060</a></p>
+         <p style="margin-left: 132px;"><a href="tel:15921658801">159-2165-8801</a></p>
+       </div>
+     </div>
+  </div>
+
+
+<script src="js/jquery.js"></script>
+<script type="text/javascript" src="js/time/jquery.jedate.js"></script>
+<script type="text/javascript" src="js/time/jedate-test.js"></script>
+<script>
+$("body").on("touchmove", function (event) {event.preventDefault();});
+    document.addEventListener('touchmove', function(e){e.preventDefault()}, false);
+var overscroll = function(el) {
+  el.addEventListener('touchstart', function() {
+    var top = el.scrollTop
+      , totalScroll = el.scrollHeight
+      , currentScroll = top + el.offsetHeight;
+    //If we're at the top or the bottom of the containers
+    //scroll, push up or down one pixel.
+    //
+    //this prevents the scroll from "passing through" to
+    //the body.
+    if(top === 0) {
+      el.scrollTop = 1;
+    } else if(currentScroll === totalScroll) {
+      el.scrollTop = top - 1;
+    }
+  });
+  el.addEventListener('touchmove', function(evt) {
+    //if the content is actually scrollable, i.e. the content is long enough
+    //that scrolling can occur
+    if(el.offsetHeight < el.scrollHeight)
+      evt._isScroller = true;
+  });
+}
+overscroll(document.querySelector('.se'));
+document.body.addEventListener('touchmove', function(evt) {
+  //In this case, the default behavior is scrolling the body, which
+  //would result in an overflow.  Since we don't want that, we preventDefault.
+  if(!evt._isScroller) {
+    evt.preventDefault();
+  }
+});
+
+
+</script>
+</body>
+</html>
